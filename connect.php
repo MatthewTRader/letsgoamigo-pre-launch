@@ -19,7 +19,8 @@ else{
 $sql = "INSERT INTO signup (name, email)
 values ('$name','$email')";
 if ($conn->query($sql)){
-echo "Thank you! You will now recieve updates about Let's Go Amigo!";
+header('Location: thankyou.html');
+exit;
 }
 else{
 echo "Error: ". $sql ."
